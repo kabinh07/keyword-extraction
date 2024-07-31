@@ -1,5 +1,0 @@
-setup.py
-bangla_keyword_extractor.egg-info/PKG-INFO
-bangla_keyword_extractor.egg-info/SOURCES.txt
-bangla_keyword_extractor.egg-info/dependency_links.txt
-bangla_keyword_extractor.egg-info/top_level.txt
