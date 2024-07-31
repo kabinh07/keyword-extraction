@@ -1,17 +1,19 @@
+__version__ = 'dev'
+
 import re
-from custom_rake import BanglaRake
+from .custom_rake import BanglaRake
 from sbnltk.Tokenizer import wordTokenizer, sentenceTokenizer
 from collections import defaultdict, Counter
 import numpy as np
-import pandas as pd
 import networkx as nx
 from tqdm import tqdm
+import os
 
 class KeywordExractor:
     def __init__(self, input_text_list, stop_words = None):
         self.text_list = input_text_list
         if stop_words is None:
-            with open("data/stopwords.txt") as f:
+            with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"../data/stopwords.txt")) as f:
                 self.stopwords = f.read().split("\n")
         else:
             self.stopwords = stop_words
